@@ -1,15 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
-# 第一次使用PyPDF2需要安裝
-get_ipython().system('pip install PyPDF2')
-
-
-# In[2]:
-
 
 # 請先建立一個叫做output的資料夾, 擺在pdf檔案下面一層 #
 import numpy as np
@@ -23,9 +14,6 @@ from PIL import Image
 from skimage.transform import resize
 from skimage.measure import block_reduce
 import datetime
-
-
-# In[3]:
 
 
 def rgb2gray(img):
@@ -225,9 +213,6 @@ def extrat_lines_values(path='./chart_3.jpg',
     mid_lines = img.shape[0] - mid_lines
     mid_lines = mid_lines * y_slope + y_range[0]
     return mid_lines
-
-
-# In[87]:
 
 
 ##############需要自己輸入的部分###########################
@@ -519,58 +504,6 @@ for i in range(len(res['time_origin'])):
 res['time'] = temp
 res = res.drop(columns=['drop'])
 res.to_csv(r'output/'+patient+'_chart5.csv', index=False)
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
 
 
 
